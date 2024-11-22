@@ -1,3 +1,308 @@
+/* -------------------- CSS BY NAME -------------------------------------- */
+/* Author: Tate Beasley */
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
+/*-------------------- CSS RESET ---------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root{
+    --teal :#4CA7C0;
+    --purple: #484FB7;
+    --lavender: #6B8FE7;
+    --yellow: #E9BB57; 
+    --pink:#D9526F;
+    --dark-gray:#1E1E1E; 
+    --white:#ffffff;
+}
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
 body{
-            font-size: 16px;
-        }
+    font-family: 'Inter';
+}
+h1{
+    font-size: 2.5em;
+}
+h1, h2{
+    color: #ffffff;
+    font-family: 'Kavoon', cursive;
+    
+}
+body {
+    background-color: var(--purple);
+}
+
+header {
+    text-align: center;
+    position: relative;
+}
+header h1{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: var(--lavender);
+    padding: 10px;
+    margin: 0 auto 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1;
+    position: relative;
+}
+header p{
+    background-color: var(--pink);
+    color: var(--white);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    width:98%;
+    box-sizing: border-box;
+    margin: -15px auto 0;
+    padding: 25px 0 5px 0;
+    font-style: italic;
+    z-index: 0;
+    white-space: nowrap;
+    color:transparent;
+    position:relative;
+}
+header p::after{
+    content: "Unlock your full potential";
+    position: absolute;
+    top: -20;
+    left: 0;
+    right: 0;
+    color: var(--white);
+    text-align: center;
+}
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--yellow);
+    color: var(--dark-gray);
+    padding: 10px 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1em;
+    z-index: 3;
+}
+nav h2{
+    color: var(--dark-gray);
+}
+nav ul{
+    display: none;
+}
+article h2{
+    padding: 25px 0 10px 0;
+}
+h3{
+    color: var(--yellow);
+    font-weight: 700;
+}
+main h2, main h3{
+    margin: 0 0 0 10px;
+}
+
+#services > section > div {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 20px 20px 20px;
+}
+#One-on-One {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+main p{
+    font-family: 'Inter';
+    margin: 10px 5px 10px 5px;
+}
+main h4{
+    color:var(--purple);
+    font-family: 'Inter';
+    font-weight: 700;
+    margin: 5px;
+}
+
+aside {
+    background-color: var(--pink);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 20px 20px 20px;
+}
+aside section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+aside section > div{
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 20px 20px 20px;
+    font-weight:700;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    text-align: center;
+}
+aside section > div:nth-child(1){
+    background-color: var(--teal);
+}
+aside section > div:nth-child(2){
+    background-color: var(--lavender);
+}
+aside section > div:nth-child(3){
+    background-color: var(--yellow);
+}
+aside section > div:nth-child(4){
+    background-color: var(--white);
+}
+#pricing > table{
+    background-color: var(--yellow);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding:10px;
+    text-align: center;
+    width:60%;
+    margin: 10px auto 10px auto;
+    border-collapse: separate;
+    border-spacing: ;
+}
+#pricing > table tbody {
+    background-color: var(--white);
+}
+#pricing > table thead tr,#pricing > table tbody tr {
+    display: grid;
+    grid-template-columns: 2fr 1fr;  
+}
+#pricing > table tbody tr td{
+    border: 1px solid var(--yellow);
+}
+#end{
+    background-color: var(--pink);
+    color: white;
+    text-align: justify;
+    padding: 10px;
+}
+#end h2{
+    text-align: center;
+    font-size: 2em;
+    padding: 10px 0 10px 0;
+}
+#end a{
+    display: flex;
+    width:80%;
+    justify-content: center;
+    margin: 10px auto;
+    background-color: white;
+    color: var(--dark-gray);
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px var(--dark-gray);
+    font-weight: 700;
+    font-size: 1.2em;
+    text-align: center;  
+}
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 40px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: var(--lavender);
+    margin: 0 0 20px 0;
+    color: white;
+}
+footer small{
+    margin: 0;
+    text-align: center;
+}
+footer small:nth-child(2){
+    text-decoration: underline;
+}
+
+
+/*-------------------- MEDIA QUERY (medium 620px) --------------------------------*/
+@media (min-width: 834px){
+    header p{
+        background-color: var(--pink);
+        color: var(--white);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        width:98%;
+        box-sizing: border-box;
+        margin: -15px auto 0;
+        padding: 25px 0 5px 0;
+        font-style: italic;
+        z-index: 0;
+    }
+    header p::after{
+        content:none;
+    }
+    #One-on-One {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+#One-on-One > div:nth-child(3) {
+    grid-column: span 2;
+}
+
+}
+/*-------------------- MEDIA QUERY (large 950px) ------------------------------------*/
+@media (min-width: 950px){
+
+}
+/*-------------------- MEDIA QUERY (xl 1280px) ---------------------------------------*/
+@media (min-width: 1280px){
+    
+}
