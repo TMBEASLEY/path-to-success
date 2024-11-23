@@ -2,24 +2,93 @@
 /* Author: Tate Beasley */
 /* -------------------- IMPORTED FONTS -------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
+
 /*-------------------- CSS RESET ---------------------------------------------------*/
 /* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
 License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -27,51 +96,84 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
     list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
     quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 /* -------------------- ROOT VARIABLES --------------------------------------- */
-:root{
-    --teal :#4CA7C0;
+:root {
+    --teal: #4CA7C0;
     --purple: #484FB7;
     --lavender: #6B8FE7;
-    --yellow: #E9BB57; 
-    --pink:#D9526F;
-    --dark-gray:#1E1E1E; 
-    --white:#ffffff;
+    --yellow: #E9BB57;
+    --pink: #D9526F;
+    --dark-gray: #1E1E1E;
+    --white: #ffffff;
 }
+
 /* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
-body{
+body {
     font-family: 'Inter';
 }
-h1{
+
+h1 {
     font-size: 2.5em;
 }
-h1, h2{
+
+h1,
+h2 {
     color: #ffffff;
     font-family: 'Kavoon', cursive;
-    
+    font-size: 1.7em;
 }
+
+nav h2 {
+    font-family: 'inter';
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 body {
     background-color: var(--purple);
 }
@@ -80,33 +182,38 @@ header {
     text-align: center;
     position: relative;
 }
-header h1{
+
+header h1 {
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: var(--lavender);
-    padding: 10px;
+    padding: 50px;
     margin: 0 auto 0;
     width: 100%;
     box-sizing: border-box;
     z-index: 1;
     position: relative;
+    font-size: 3.5em;
 }
-header p{
+
+header p {
     background-color: var(--pink);
     color: var(--white);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    width:98%;
+    width: 98%;
     box-sizing: border-box;
     margin: -15px auto 0;
-    padding: 25px 0 5px 0;
+    padding: 30px 0 5px 0;
     font-style: italic;
     z-index: 0;
     white-space: nowrap;
-    color:transparent;
-    position:relative;
+    color: transparent;
+    position: relative;
+    font-size: 1.25em;
 }
-header p::after{
+
+header p::after {
     content: "Unlock your full potential";
     position: absolute;
     top: -20;
@@ -115,6 +222,7 @@ header p::after{
     color: var(--white);
     text-align: center;
 }
+
 nav {
     position: fixed;
     top: 0;
@@ -128,41 +236,49 @@ nav {
     font-size: 1em;
     z-index: 3;
 }
-nav h2{
+
+nav h2 {
     color: var(--dark-gray);
 }
-nav ul{
+
+nav ul {
     display: none;
 }
-article h2{
+
+#services h2 {
     padding: 25px 0 10px 0;
 }
-h3{
+
+h3 {
     color: var(--yellow);
     font-weight: 700;
 }
-main h2, main h3{
+
+main h2,
+main h3 {
     margin: 0 0 0 10px;
 }
 
-#services > section > div {
+#services>section>div {
     background-color: #ffffff;
     border-radius: 10px;
     padding: 20px;
     margin: 20px 20px 20px 20px;
 }
+
 #One-on-One {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
 }
 
-main p{
+main p {
     font-family: 'Inter';
     margin: 10px 5px 10px 5px;
 }
-main h4{
-    color:var(--purple);
+
+main h4 {
+    color: var(--purple);
     font-family: 'Inter';
     font-weight: 700;
     margin: 5px;
@@ -174,69 +290,94 @@ aside {
     padding: 20px;
     margin: 20px 20px 20px 20px;
 }
-aside section{
+
+aside section {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-aside section > div{
+
+aside section>div {
     border-radius: 10px;
     padding: 20px;
     margin: 20px 20px 20px 20px;
-    font-weight:700;
+    font-weight: 700;
     justify-content: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     text-align: center;
 }
-aside section > div:nth-child(1){
+
+aside section>div:nth-child(1) {
     background-color: var(--teal);
 }
-aside section > div:nth-child(2){
+
+aside section>div:nth-child(2) {
     background-color: var(--lavender);
 }
-aside section > div:nth-child(3){
+
+aside section>div:nth-child(3) {
     background-color: var(--yellow);
 }
-aside section > div:nth-child(4){
+
+aside section>div:nth-child(4) {
     background-color: var(--white);
 }
-#pricing > table{
+
+#pricing>table {
     background-color: var(--yellow);
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding:10px;
     text-align: center;
-    width:60%;
+    width: 60%;
     margin: 10px auto 10px auto;
     border-collapse: separate;
-    border-spacing: ;
 }
-#pricing > table tbody {
+
+#pricing>table tbody {
     background-color: var(--white);
 }
-#pricing > table thead tr,#pricing > table tbody tr {
+
+
+#pricing>table tbody tr {
     display: grid;
-    grid-template-columns: 2fr 1fr;  
+    grid-template-columns: 2fr 1fr;
 }
-#pricing > table tbody tr td{
+
+#pricing>table thead tr {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding: 10px 20px 10px 20px;
+}
+
+#pricing>table thead {
+    width: 280px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+#pricing>table tbody tr td {
     border: 1px solid var(--yellow);
+    padding: 20px;
 }
-#end{
+
+#end {
     background-color: var(--pink);
     color: white;
     text-align: justify;
     padding: 10px;
 }
-#end h2{
+
+#end h2 {
     text-align: center;
     font-size: 2em;
     padding: 10px 0 10px 0;
 }
-#end a{
+
+#end a {
     display: flex;
-    width:80%;
+    width: 80%;
     justify-content: center;
     margin: 10px auto;
     background-color: white;
@@ -247,8 +388,9 @@ aside section > div:nth-child(4){
     box-shadow: 0 4px 6px var(--dark-gray);
     font-weight: 700;
     font-size: 1.2em;
-    text-align: center;  
+    text-align: center;
 }
+
 footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -262,47 +404,145 @@ footer {
     margin: 0 0 20px 0;
     color: white;
 }
-footer small{
+
+footer small {
     margin: 0;
     text-align: center;
 }
-footer small:nth-child(2){
+
+footer small:nth-child(2) {
     text-decoration: underline;
 }
 
 
 /*-------------------- MEDIA QUERY (medium 620px) --------------------------------*/
-@media (min-width: 834px){
-    header p{
+@media (min-width: 834px) {
+    header p {
         background-color: var(--pink);
         color: var(--white);
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
-        width:98%;
+        width: 98%;
         box-sizing: border-box;
         margin: -15px auto 0;
         padding: 25px 0 5px 0;
         font-style: italic;
         z-index: 0;
     }
-    header p::after{
-        content:none;
+
+    header p::after {
+        content: none;
     }
+
+
     #One-on-One {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
-#One-on-One > div:nth-child(3) {
-    grid-column: span 2;
-}
+
+    #One-on-One>*:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    #Group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    #pricing {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #pricing>*:nth-child(1) {
+        grid-row: 1;
+    }
+
+    #pricing>*:nth-child(2) {
+        grid-row: 2;
+    }
+
+    #pricing>*:nth-child(3) {
+        grid-row: 3;
+    }
+
+    #pricing>*:nth-child(4) {
+        grid-row: 4;
+    }
+
+    #end {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #end>*:nth-child(1) {
+        grid-row: 1
+    }
+
+    #end>*:nth-child(2) {
+        grid-row: 2
+    }
+
+    #end>*:nth-child(3) {
+        grid-row: 2
+    }
+
+    #end>h2 {
+        grid-column: span 2;
+        text-align: left;
+        font-size: 3em;
+    }
+
 
 }
+
 /*-------------------- MEDIA QUERY (large 950px) ------------------------------------*/
-@media (min-width: 950px){
+@media (min-width: 950px) {
+    aside section {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #services {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #services>*:nth-child(1) {
+        grid-row: 1
+    }
+
+    #services>*:nth-child(2) {
+        grid-row: 2
+    }
+
+    #services>*:nth-child(3) {
+        grid-row: 1
+    }
+
+    #services>*:nth-child(4) {
+        grid-row: 2
+    }
+
+    #services>*:nth-child(5) {
+        grid-row: 1
+    }
+
+    #services>*:nth-child(6) {
+        grid-row: 2
+    }
+
+    #services>*:nth-child(7) {
+        grid-row: 1
+    }
+
+    #services>*:nth-child(8) {
+        grid-row: 2
+    }
 
 }
+
 /*-------------------- MEDIA QUERY (xl 1280px) ---------------------------------------*/
-@media (min-width: 1280px){
-    
-}
+@media (min-width: 1280px) {}
