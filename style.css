@@ -216,7 +216,6 @@ header p {
 header p::after {
     content: "Unlock your full potential";
     position: absolute;
-    top: -20;
     left: 0;
     right: 0;
     color: var(--white);
@@ -554,7 +553,6 @@ footer small:nth-child(2) {
     }
     nav ul{
         display: flex;
-        flex-direction: none;
         justify-content: space-around;
         gap:30px;
         text-transform: uppercase;
